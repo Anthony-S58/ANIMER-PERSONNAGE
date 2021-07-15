@@ -55,25 +55,21 @@ document.addEventListener('keydown', function(pose){
       bomb.style.backgroundImage="url(img/bomb.png)";
       bomb.style.display="block";
       explode.style.display = "none";
-
       bomb.style.top = player.style.top;
       bomb.style.left = player.style.left;
+
       if (setTimeout(function() {
-        bomb.style.display="none";
-        explode.style.backgroundImage= "url(img/explosion2.png)";
-      
-        explode.style.top = bomb.style.top;
+         bomb.style.display="none";
+         explode.style.backgroundImage= "url(img/explosion2.png)";
+         explode.style.top = bomb.style.top;
          explode.style.left = bomb.style.left;
-        explode.style.display = "block";
+         explode.style.display = "block";
       },3000));
+
       if (setTimeout(function() {
          explode.style.display = "none";
-       },6000));
-       
-      
-}
-
-});
+       },5000));     
+}});
 
 
 
