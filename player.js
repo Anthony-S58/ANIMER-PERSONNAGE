@@ -49,6 +49,7 @@ const bomb = document.getElementById("bomb");
 let explode = document.getElementById("explosion");
 
 
+
 document.addEventListener('keydown', function(pose){
 
     if (pose.code =='Space') {
@@ -61,15 +62,24 @@ document.addEventListener('keydown', function(pose){
       if (setTimeout(function() {
          bomb.style.display="none";
          explode.style.backgroundImage= "url(img/explosion2.png)";
+         for(i=0; i>=0 && i<=552; i++);
+         
          explode.style.top = bomb.style.top;
-         explode.style.left = bomb.style.left;
+         explode.style.left = bomb.style.left[i];
          explode.style.display = "block";
       },3000));
 
       if (setTimeout(function() {
          explode.style.display = "none";
-       },5000));     
+       },5000));   
+       
+       if (explode.style.display="block") {
+          document.createElement("div");
+
+       }
 }});
+
+
 
 
 
